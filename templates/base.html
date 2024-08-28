@@ -1,0 +1,31 @@
+{% load static %}
+
+<html lang="en" class="has-background-primary-light" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{% endblock title %}</title>
+    <script>
+    function noenter() {
+  return !(window.event && window.event.keyCode == 13); }
+  </script>
+    <!-- CSS only -->
+      <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script src="https://cdn.tailwindcss.com"></script>
+    <script src="{% static 'index.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/IamEinstein/Djank/gh-pages/sources/bank-icon.jpg" type="image/x-icon">
+    <style>
+      body {
+        padding: 5%;
+        transition-duration: 3s;
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    {% block body %}{% endblock body %}
+  </body>
+</html>
